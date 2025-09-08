@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Husky Pointing ($U)</title>
+  <meta name="description" content="Husky Pointing ($U) — the meme coin with maximum vibes." />
+  <link rel="icon" href="husky.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink:"#0e0f13", accent:"#4f8cff" }
+        }
+      }
+    }
+  </script>
+  <style>
+    html,body { background:#0e0f13; color:#fff; font-family:Inter,system-ui,sans-serif; }
+  </style>
+</head>
+
+<body class="text-center px-4 py-12">
+  <!-- Hero -->
+  <h1 class="text-4xl md:text-6xl font-extrabold">
+    Husky Pointing <span class="text-accent">($U)</span>
+  </h1>
+  <p class="mt-4 text-white/80 text-lg">The meme coin with maximum vibes.</p>
+
+  <!-- Meme image -->
+  <div class="mt-8 flex justify-center">
+    <img src="husky.png" alt="Husky Pointing Meme" class="rounded-2xl shadow-lg max-w-md" />
+  </div>
+
+  <!-- Contract -->
+  <div class="mt-10 bg-white/5 border border-white/10 rounded-xl p-6 inline-block">
+    <h2 class="text-xl font-semibold">Contract Address</h2>
+    <p class="mt-2 font-mono break-all text-white/80">
+      AJyUufGfyHFhPefJLTpszSaajKp2cNTDQV1YDmzCpump
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-12 text-white/60 text-sm">
+    <p>Disclaimer: This is not financial advice. Tokens may be worthless. Do your own research.</p>
+    <p class="mt-2">© <span id="year"></span> Husky Pointing ($U)</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
