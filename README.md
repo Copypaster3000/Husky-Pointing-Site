@@ -1,6 +1,10 @@
 # Husky Pointing ($U)  
 
-<img src="husky.png" alt="Husky Meme" width="300">
+<p align="center">
+  <img src="husky.png" alt="Husky Meme" width="200"/>
+  <img src="husky.png" alt="Husky Meme" width="200"/>
+  <img src="husky.png" alt="Husky Meme" width="200"/>
+</p>
 
 The official website for **Husky Pointing ($U)** — the meme coin inspired by the viral husky pointing meme that’s blowing up on TikTok.  
 
