@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Husky Pointing ($U)</title>
-  <meta name="description" content="Husky Pointing ($U) &mdash; the meme coin blowing up on TikTok." />
-  <link rel="icon" href="images/memes/husky.png" />
+  <meta name="description" content="Husky Pointing ($U) — the meme coin blowing up on TikTok." />
+  <link rel="icon" href="images/husky.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,47 +13,76 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { ink:"#0e0f13", accent:"#4f8cff" }
+          colors: { ink: "#0e0f13", accent: "#4f8cff" }
         }
       }
     }
   </script>
   <style>
-    html,body { background:#0e0f13; color:#fff; font-family:Inter,system-ui,sans-serif; }
-
-    /* Carousel helpers */
-    .carousel-track { display:flex; transition: transform 360ms cubic-bezier(.22,.61,.36,1); will-change: transform; }
-    .carousel-slide { min-width:100%; }
-    .carousel-arrow {
-      position:absolute; top:50%; transform:translateY(-50%);
-      width:40px; height:40px; border-radius:12px;
-      background: rgba(15,16,22,0.85); border:1px solid rgba(255,255,255,0.15);
-      display:grid; place-items:center; cursor:pointer; user-select:none;
+    html, body {
+      background: #0e0f13;
+      color: #fff;
+      font-family: Inter, system-ui, sans-serif;
     }
-    .carousel-arrow:hover { outline: 3px solid rgba(79,140,255,0.35); }
-    .carousel-dot { width:8px; height:8px; border-radius:999px; background:rgba(255,255,255,0.35); }
-    .carousel-dot[aria-current="true"] { background:#4f8cff; }
 
-    /* ▶ NEW: uniform slide frame + centered images (no cropping) */
-    [data-carousel] .carousel-slide {
+    .carousel-track {
+      display: flex;
+      transition: transform 360ms cubic-bezier(.22,.61,.36,1);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
       height: clamp(320px, 80vh, 820px);
+    }
+
+    .carousel-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      border-radius: 0.75rem;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(15,16,22,0.85);
+      border: 1px solid rgba(255,255,255,0.15);
       display: grid;
       place-items: center;
-      padding: 12px;
+      cursor: pointer;
+      user-select: none;
     }
-    [data-carousel] .carousel-slide img {
-      width: auto;         /* override w-full */
-      max-width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: contain; /* letterbox if needed, no overflow */
-      border-radius: 0.75rem;
+
+    .carousel-arrow:hover {
+      outline: 3px solid rgba(79,140,255,0.35);
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.35);
+    }
+
+    .carousel-dot[aria-current="true"] {
+      background: #4f8cff;
     }
   </style>
 </head>
 
 <body class="text-center px-4 py-12">
-  <!-- Hero -->
   <h1 class="text-4xl md:text-6xl font-extrabold">
     Husky Pointing <span class="text-accent">($U)</span>
   </h1>
@@ -62,14 +91,11 @@
   </h2>
   <p class="mt-4 text-white/80 text-lg">The meme blowing up in TikTok comments.</p>
 
-  <!-- Meme image -->
   <div class="mt-8 flex justify-center">
-    <img src="images/memes/husky.png" alt="Husky Pointing Meme" class="rounded-2xl shadow-lg max-w-md" />
+    <img src="images/husky.png" alt="Husky Pointing Meme" class="rounded-2xl shadow-lg max-w-md" />
   </div>
 
-  <!-- Contract + Socials stacked -->
   <div class="mt-10 max-w-lg mx-auto space-y-6">
-    <!-- Contract -->
     <div class="bg-white/5 border border-white/10 rounded-xl p-6">
       <h2 class="text-xl font-semibold">Contract Address</h2>
       <p class="mt-2 font-mono break-all text-white/80">
@@ -77,61 +103,39 @@
       </p>
     </div>
 
-    <!-- Socials -->
     <div class="bg-white/5 border border-white/10 rounded-xl p-6">
       <h2 class="text-xl font-semibold">Socials</h2>
       <ul class="mt-3 space-y-2 text-white/80">
-        <li>
-          <a href="https://x.com/huskypointing" target="_blank" 
-             rel="noopener noreferrer"
-             class="text-accent hover:underline font-semibold">
-            X (Twitter)
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/i/communities/1963712136796106760" target="_blank" 
-             rel="noopener noreferrer"
-             class="text-accent hover:underline font-semibold">
-            X Community
-          </a>
-        </li>
+        <li><a href="https://x.com/huskypointing" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline font-semibold">X (Twitter)</a></li>
+        <li><a href="https://x.com/i/communities/1963712136796106760" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline font-semibold">X Community</a></li>
       </ul>
     </div>
   </div>
-  
-  <!-- Divider -->
+
   <div class="mt-16 border-t border-white/10"></div>
 
-  <!-- Memes from $U -->
   <section class="mt-16 max-w-2xl mx-auto text-center">
     <h2 class="text-3xl font-extrabold mb-8">Memes from $U</h2>
-
-    <div class="relative overflow-hidden bg-white/5 border border-white/10 rounded-xl"
-         data-carousel id="memes-carousel" data-srcdir="images/memes" aria-roledescription="carousel">
+    <div class="relative overflow-hidden bg-white/5 border border-white/10 rounded-xl" data-carousel id="memes-carousel" data-srcdir="images/memes" aria-roledescription="carousel">
       <div class="carousel-track" data-track></div>
-      <button class="carousel-arrow left-2" data-prev aria-label="Previous">&lsaquo;</button>
-      <button class="carousel-arrow right-2" data-next aria-label="Next">&rsaquo;</button>
+      <button class="carousel-arrow left-2" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-arrow right-2" data-next aria-label="Next">›</button>
       <div class="absolute bottom-3 inset-x-0 flex items-center justify-center gap-2" data-dots></div>
     </div>
   </section>
 
-  <!-- Divider -->
   <div class="mt-16 border-t border-white/10"></div>
 
-  <!-- $U in the Wild -->
   <section class="mt-16 max-w-2xl mx-auto text-center">
     <h2 class="text-3xl font-extrabold mb-8">Husky Pointing $U in the Wild</h2>
-
-    <div class="relative overflow-hidden bg-white/5 border border-white/10 rounded-xl"
-         data-carousel id="wild-carousel" data-srcdir="images/examples" aria-roledescription="carousel">
+    <div class="relative overflow-hidden bg-white/5 border border-white/10 rounded-xl" data-carousel id="wild-carousel" data-srcdir="images/examples" aria-roledescription="carousel">
       <div class="carousel-track" data-track></div>
-      <button class="carousel-arrow left-2" data-prev aria-label="Previous">&lsaquo;</button>
-      <button class="carousel-arrow right-2" data-next aria-label="Next">&rsaquo;</button>
+      <button class="carousel-arrow left-2" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-arrow right-2" data-next aria-label="Next">›</button>
       <div class="absolute bottom-3 inset-x-0 flex items-center justify-center gap-2" data-dots></div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="mt-12 text-white/60 text-sm">
     <p>Disclaimer: This is not financial advice.</p>
     <p class="mt-2">&copy; <span id="year"></span> Husky Pointing ($U)</p>
@@ -140,9 +144,8 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // --- Build each carousel from its manifest.json (written by GitHub Action) ---
     async function populateFromManifest(root) {
-      const dir = root.dataset.srcdir?.replace(/^\/+|\/+$/g,"");
+      const dir = root.dataset.srcdir?.replace(/^\/+/g, "").replace(/\/+$/, "");
       if (!dir) return;
       try {
         const res = await fetch(`${dir}/manifest.json`, { cache: "no-cache" });
@@ -158,7 +161,7 @@
           img.alt = "";
           img.loading = "lazy";
           img.decoding = "async";
-          img.className = "w-full h-auto rounded-xl";
+          img.className = "rounded-xl";
           slide.appendChild(img);
           track.appendChild(slide);
         }
@@ -167,7 +170,6 @@
       }
     }
 
-    // --- Minimal, reusable carousel logic ---
     function attachCarousel(root) {
       const track = root.querySelector('.carousel-track');
       const prevBtn = root.querySelector('[data-prev]');
@@ -212,7 +214,6 @@
         if (e.key === 'ArrowLeft')  prev();
       });
 
-      // Drag/swipe
       let isDragging = false, startX = 0, currentX = 0;
       track.addEventListener('pointerdown', (e) => {
         isDragging = true; startX = e.clientX; currentX = startX;
@@ -237,15 +238,13 @@
       track.addEventListener('pointerup', endDrag);
       track.addEventListener('pointercancel', endDrag);
 
-      // Init
       buildDots();
       update();
     }
 
-    // --- Boot: populate from manifests, then attach carousels ---
     (async function boot(){
       const sections = document.querySelectorAll('[data-carousel][data-srcdir]');
-      for (const sec of sections) { await populateFromManifest(sec); }
+      for (const sec of sections) await populateFromManifest(sec);
       sections.forEach(attachCarousel);
     })();
   </script>
