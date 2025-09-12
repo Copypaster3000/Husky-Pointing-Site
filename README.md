@@ -28,6 +28,7 @@ AJyUufGfyHFhPefJLTpszSaajKp2cNTDQV1YDmzCpump
 ---
 
 ## 🌐 Socials  
+- [X Community] (https://x.com/i/communities/1963712136796106760)
 - [X (Twitter)](https://x.com/huskypointing)  
 
 ---
@@ -59,7 +60,7 @@ Visit `http://localhost:8000` to preview.
 
 ## 🤝 Contributing  
 PRs and meme submissions welcome.  
-If you’ve got a Husky Pointing meme with traction, add it to the `/` folder as an image and update `index.html`.  
+If you’ve got a Husky Pointing meme with traction, add it to the images/memes/ folder.  
 
 ---
 
