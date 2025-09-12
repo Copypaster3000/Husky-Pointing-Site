@@ -28,7 +28,7 @@ AJyUufGfyHFhPefJLTpszSaajKp2cNTDQV1YDmzCpump
 ---
 
 ## 🌐 Socials  
-- [X Community] (https://x.com/i/communities/1963712136796106760)
+- [X Community](https://x.com/i/communities/1963712136796106760)
 - [X (Twitter)](https://x.com/huskypointing)  
 
 ---
